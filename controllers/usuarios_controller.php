@@ -1,4 +1,4 @@
 <?php
-    include_once ("");
+    include_once ("C:\xampp\htdocs\TiendaMVC\db\bd.php");
 
 ?>
