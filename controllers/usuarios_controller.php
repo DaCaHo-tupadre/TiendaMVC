@@ -16,7 +16,7 @@
         }
 
         public function crearUsuario($nick, $password, $mail, $admin){
-            $sql = "INSERT INTO '$this->$tabla'('nick','mail','password','admin') VALUES('$nick','$password','$mail','$admin')";
+            $sql = "INSERT INTO `$this->tabla` ('nick','mail','password','admin') VALUES('$nick','$password','$mail','$admin')";
 
             $consulta->$this->bd->query($sql);
 
