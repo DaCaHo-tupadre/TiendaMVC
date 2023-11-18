@@ -25,7 +25,12 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/usuarios_model.php");
 
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST') {
-    usuarios_model:: addUsuario($_POST["nombre"],$_POST["mail"], $_POST["password"], "N");
+    if ($_POST["password"] == $_POST["passwordC"]){
+        usuarios_model:: addUsuario($_POST["nick"],$_POST["mail"], $_POST["password"], "N");
+    }else{
+        echo "contraseñas diferentes";
+    }
+
 }
 ?>
 

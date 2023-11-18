@@ -1,0 +1,57 @@
+
+.menu ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.menu ul li {
+    background-color:#2e518b;
+}
+
+.menu ul a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.menu ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+.menu ul li:hover {
+    background:#5b78a7;
+}
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #5b78a7; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar img{
+    width: 50px;
+    height: 50px;
+}
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #2e518b; /* Add a hover color */
+}
+
