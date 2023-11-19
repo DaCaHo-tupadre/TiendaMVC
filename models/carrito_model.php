@@ -8,6 +8,10 @@ class carrito_model{
         $carrito = new carrito_controller();
         return $carrito->viewCarrito($id);
     }
+    public static function addProductoCarrito($producto,$cantidad,$precio,$usuario){
+
+
+    }
 }
 
 

@@ -12,28 +12,34 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/categoria_model.php");
     <a href="perfil_view.php"><img src="../img/icon_usuario.png"></a>
 </div>
 
+<div class="form-style-3">
+    <div class="form">
 <form method="post">
-    <label >nombre:</label>
-    <input type="text" name="nombre" ><br><br>
-    <label >precio:</label>
-    <input type="text" name="precio"><br><br>
-    <label >stock:</label>
-    <input type="text" name="stock"><br><br>
-    <label >Categoria:</label>
-    <select name="categoria">
-        <?php
+    <p>Añadir Producto</p>
+    <label ><span>Nombre:</span><input type="text" name="nombre" ><br><br></label>
 
-        $datos = categoria_model::viewCategoria();
+    <label ><span>Precio:</span><input type="text" name="precio"><br><br></label>
 
-        foreach($datos as $dato){?>
+    <label ><span>Stock:</span><input type="text" name="stock"><br><br></label>
 
-            <option value="<?php echo $dato["id"] ?>"> <?php echo $dato["nombre"] ?> </option>
+    <label ><span>Categoria:</span><select name="categoria">
+            <?php
 
-        <?php }?>
-    </select>
+            $datos = categoria_model::viewCategoria();
+
+            foreach($datos as $dato){?>
+
+                <option value="<?php echo $dato["id"] ?>"> <?php echo $dato["nombre"] ?> </option>
+
+            <?php }?>
+        </select></label>
+
     <input type="submit" name="Crear" >
+    <button name="home"><a href="menu_admin.html"> Atras </a> </button>
 </form>
-<button name="home"><a href="menu_admin.html"> Atras </a> </button>
+    </div>
+</div>
+
 
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST') {
@@ -48,5 +54,6 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     <meta charset="UTF-8" />
     <title>Log In</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesF.css">
 </head>
 </html>

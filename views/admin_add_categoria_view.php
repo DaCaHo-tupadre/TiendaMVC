@@ -12,15 +12,20 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/categoria_model.php");
     <a href="perfil_view.php"><img src="../img/icon_usuario.png"></a>
 </div>
 
-
+<div class="form-style-3">
+    <div class="form">
 <form method="post">
-    <label >nombre:</label>
-    <input type="text" name="nombre" ><br><br>
-    <label >descripcion:</label>
-    <input type="text" name="descripcion"><br><br>
+    <p>Añadir Categoria</p>
+    <label ><span>Nombre:</span><input type="text" name="nombre" ><br><br></label>
+
+    <label ><span>Descripcion:</span><input type="textarea" name="descripcion"><br><br></label>
+
     <input type="submit" name="Crear" >
+    <button name="home"><a href="menu_admin.html"> Atras </a> </button>
 </form>
-<button name="home"><a href="menu_admin.html"> Atras </a> </button>
+    </div >
+</div >
+
 
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST') {
@@ -35,5 +40,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     <meta charset="UTF-8" />
     <title>Log In</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesF.css">
+
 </head>
 </html>

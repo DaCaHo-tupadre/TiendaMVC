@@ -12,20 +12,24 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/usuarios_model.php");
     <a href="perfil_view.php"><img src="../img/icon_usuario.png"></a>
 </div>
 
-
+<div class="form-style-3">
+    <div class="form">
 <form method="post">
-    <label >nick:</label>
-    <input type="text" name="nick" value="<?php echo $_SESSION["nick"];?>" ><br><br>
-    <label >mail:</label>
-    <input type="text" name="mail" value="<?php echo $_SESSION["mail"];?>"><br><br>
-    <label >Contraseña:</label>
-    <input type="password" name="password" value="<?php echo $_SESSION["password"];?>"><br><br>
-    <label >Contraseña confirmada:</label>
-    <input type="password" name="passwordC" value="<?php echo $_SESSION["password"];?>"><br><br>
+    <label ><span>Nick</span><input type="text" name="nick" value="<?php echo $_SESSION["nick"];?>" ><br><br></label>
 
-    <input type="submit" name="Modificar" >
+    <label ><span>Mail</span> <input type="text" name="mail" value="<?php echo $_SESSION["mail"];?>"><br><br></label>
+
+    <label ><span>Contraseña</span><input type="password" name="password" value="<?php echo $_SESSION["password"];?>"><br><br></label>
+
+    <label ><span>Confirmar Contraseña</span><input type="password" name="passwordC" value="<?php echo $_SESSION["password"];?>"><br><br></label>
+
+
+    <input type="submit" name="Modificar" value="Modificar">
+    <button name="home"><a href="menu_admin.html"> Atras </a> </button>
 </form>
-<button name="home"><a href="menu_admin.html"> Atras </a> </button>
+    </div>
+</div>
+
 
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST') {
@@ -48,5 +52,6 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     <meta charset="UTF-8" />
     <title>Log In</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesF.css">
 </head>
 </html>

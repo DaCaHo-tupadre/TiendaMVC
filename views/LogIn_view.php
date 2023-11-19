@@ -8,15 +8,20 @@
 require_once("C:/xampp/htdocs/TiendaMVC/models/usuarios_model.php");
 
 ?>
-
+<div class="form-style-3">
+    <div class="form">
 <form method="post">
-    <label >nombre:</label>
-    <input type="text" name="nombre"><br><br>
-    <label >Password:</label>
-    <input type="password" name="password"><br><br>
+    <p> Iniciar Session</p>
+    <label ><span>Nombre:</span><input type="text" name="nombre"><br><br></label>
+
+    <label ><span>Contraseña:</span> <input type="password" name="password"><br><br></label>
+
     <input type="submit" name="enviar" >
 </form>
-<button name="home"><a href="Register_view.php"> Registrarse </a> </button>
+        <button name="home"><a href="Register_view.php"> Registrarse </a> </button>
+    </div>
+</div>
+
 
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST') {
@@ -28,6 +33,6 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 <head>
     <meta charset="UTF-8" />
     <title>Log In</title>
-
+    <link rel="stylesheet" href="styles/stylesF.css">
 </head>
 </html>

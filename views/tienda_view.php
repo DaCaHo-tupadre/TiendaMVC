@@ -7,6 +7,7 @@
     <meta charset="UTF-8"/>
 
     <title>Alumnos</title>
+    <link rel="stylesheet" href="styles/stylesT.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>

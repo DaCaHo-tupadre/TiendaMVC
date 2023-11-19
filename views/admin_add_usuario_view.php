@@ -12,24 +12,25 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/usuarios_model.php");
     <a href="perfil_view.php"><img src="../img/icon_usuario.png"></a>
 </div>
 
-
+<div class="form-style-3">
+    <div class="form">
 <form method="post">
-    <label >nick:</label>
-    <input type="text" name="nick" ><br><br>
-    <label >mail:</label>
-    <input type="text" name="mail"><br><br>
-    <label >Contraseña:</label>
-    <input type="text" name="password"><br><br>
-    <label >Contraseña confirmada:</label>
-    <input type="text" name="passwordC"><br><br>
-    <select name="rol">
+    <p>Añadir Usuario</p>
+    <label ><span>Nick</span><input type="text" name="nick" ><br><br></label>
+    <label ><span>Mail</span>   <input type="text" name="mail"><br><br></label>
+    <label ><span>Contraseña</span><input type="text" name="password"><br><br></label>
+    <label ><span>Contraseña confirmada:</span><input type="text" name="passwordC"><br><br></label>
+    <label> <span>Rol</span><select name="rol">
             <option value="N"> Usuario Normal</option>
             <option value="A"> Administrador</option>
-    </select>
+        </select>
+    </label>
 
+    <button name="home"><a href="menu_admin.html"> Atras </a> </button>
     <input type="submit" name="Crear" >
 </form>
-<button name="home"><a href="menu_admin.html"> Atras </a> </button>
+    </div>
+</div>
 
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST') {
@@ -48,5 +49,6 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     <meta charset="UTF-8" />
     <title>Log In</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesF.css">
 </head>
 </html>

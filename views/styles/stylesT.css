@@ -1,0 +1,26 @@
+.prods{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    height: auto;
+}
+.prod{
+    margin: 10px;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px #5b78a7;
+    width: 300px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.prod p{
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 800;
+}
