@@ -7,8 +7,22 @@
         public static function addUsuario($nick,$password, $mail, $admin){
 
             $usuario = new usuarios_controller();
-            $usuario ->crearUsuario($nick,$password, $mail, $admin);
+            $usuario -> addUsuario($nick,$password, $mail, $admin);
 
+        }
+        public static function modUsuario($id,$nick,$password, $mail, $admin){
+
+            $usuario = new usuarios_controller();
+            $usuario -> modUsuario($id,$nick,$password, $mail, $admin);
+        }
+        public static function delUsuario($id){
+            $usuario = new usuarios_controller();
+            return $usuario ->delUsuario($id);
+        }
+        public static function viewUsuarios(){
+
+            $usuario = new usuarios_controller();
+            return $usuario ->viewUsuario();
         }
         public static function LogInUsuario($nick, $password){
 

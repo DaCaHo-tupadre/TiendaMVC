@@ -8,9 +8,10 @@
     <head>
         <meta charset="UTF-8" />
         <title>Personas</title>
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
-    <div>
+    <div class="icon-bar">
         <a href="menu_admin.html"><img src="../img/icon_admin.png"></a>
         <a href="tienda_view.php"><img src="../img/icon_tienda.png"></a>
         <a href="carrito_view.php"><img src="../img/icon_carrito.png"></a>
@@ -26,10 +27,11 @@
     <head>
         <meta charset="UTF-8" />
         <title>Personas</title>
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
 
-    <div>
+    <div class="icon-bar">
         <a href="admin_view.php"><img src="../img/icon_tienda.png"></a>
         <a href="admin_view.php"><img src="../img/icon_carrito.png.png"></a>
         <a href="admin_view.php"><img src="../img/icon_usuario.png.png"></a>
