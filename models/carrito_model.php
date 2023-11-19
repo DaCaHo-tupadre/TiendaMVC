@@ -11,7 +11,20 @@ class carrito_model{
     public static function addProductoCarrito($producto,$cantidad,$precio,$usuario){
 
         $carrito = new carrito_controller();
-        $carrito -> addProductoCarrito($producto,$cantidad,$precio,$usuario);
+        $carrito->viewCarrito($usuario);
+        $datos = self::viewCarrito($usuario);
+        $i =0;
+        foreach ($datos as $dato){
+            if($i == 0){
+                $carrito -> addProductoCarrito($producto,$cantidad,$precio,$usuario);
+                $i+=1;
+            }elseif($dato["producto"]==$producto  && $dato["usuario"]==$usuario && $i == 0){
+                $carrito ->sumProductoCarrito($producto,$cantidad,$precio,$usuario);
+                $i+=1;
+            }
+
+        }
+
 
     }
 }

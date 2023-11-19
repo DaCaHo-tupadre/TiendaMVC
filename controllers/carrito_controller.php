@@ -37,6 +37,26 @@ class carrito_controller{
         $consulta=$this->bd->query($sql);
         $consulta=$this->bd->query($sql1);
     }
+    public function sumProductoCarrito($producto,$cantidad,$precio,$usuario){
+
+        $sql = "UPDATE `$this->tabla` SET `cantidad` = cantidad+1
+                        WHERE  `producto` = $producto AND `usuario` = $usuario";
+        $sql1 = "UPDATE `productos` SET `stock` = stock-1
+                        WHERE  `id` = $producto ";
+
+        $consulta=$this->bd->query($sql);
+        $consulta=$this->bd->query($sql1);
+    }
+    public function restProductoCarrito($producto,$cantidad,$precio,$usuario){
+        session_start();
+        $sql = "UPDATE `$this->tabla` SET `cantidad` = cantidad-1
+                        WHERE  `producto` = $producto AND `usuario` = $usuario";
+        $sql1 = "UPDATE `productos` SET `stock` = stock-1
+                        WHERE  `id` = $producto ";
+
+        $consulta=$this->bd->query($sql);
+        $consulta=$this->bd->query($sql1);
+    }
 
 
 }

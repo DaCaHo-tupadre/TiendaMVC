@@ -58,7 +58,7 @@
     if (isset($_POST['agregarProducto'])) {
     session_start();
     carrito_model::addProductoCarrito($_POST["idProducto"],1,$_POST["precio"],$_SESSION["id"]);
-    header("refresh: 0.1");
+    header("refresh: 0.01");
 
 }
 ?>
