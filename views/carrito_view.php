@@ -20,7 +20,7 @@
 
 <table class="customers">
     <tr>
-        <td>id</td>
+
         <td>nombre</td>
         <td>precio</td>
         <td>stock</td>
@@ -38,11 +38,11 @@
         <tr>
             <?php
             foreach ($datosP as $datoP) {
-            if($datoP["id"]==$datoC["categoria"]){
+            if($datoP["id"]==$datoC["producto"]){
             ?>
 
             <td><?php echo $datoP["nombre"]?></td>
-        </tr>
+
     <?php
             }
         }
@@ -52,7 +52,7 @@
 
         <td><?php echo ($datoC["cantidad"]*$datoC["precio"])?></td>
 
-
+        </tr>
         <?php
 
     }

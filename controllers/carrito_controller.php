@@ -27,6 +27,16 @@ class carrito_controller{
 
         return $this->carrito;
     }
+    public function addProductoCarrito($producto,$cantidad,$precio,$usuario){
+
+        $sql = "INSERT INTO `$this->tabla`( `producto`, `usuario`, `cantidad`, `precio`) 
+                    VALUES ('$producto','$usuario','$cantidad','$precio')";
+        $sql1 = "UPDATE `productos` SET `stock` = stock-1
+                        WHERE  `id` = $producto ";
+
+        $consulta=$this->bd->query($sql);
+        $consulta=$this->bd->query($sql1);
+    }
 
 
 }

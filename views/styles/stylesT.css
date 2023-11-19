@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: start;
     height: auto;
+    margin: auto;
 }
 .prod{
     margin: 10px;

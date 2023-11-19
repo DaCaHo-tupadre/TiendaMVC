@@ -27,9 +27,10 @@
     foreach ($datosP as $datoP){
         ?>
         <div class="prod" >
-            <p> <?php echo $datoP["nombre"] ?></p>
-            <p> <?php echo $datoP["precio"] ?></p>
-            <p> <?php echo $datoP["stock"] ?></p>
+            <form method="post">
+            <p name="nombre"> <?php echo $datoP["nombre"] ?></p>
+            <p name="precio"> <?php echo $datoP["precio"] ?></p>
+            <p name="stock"> <?php echo $datoP["stock"] ?></p>
             <?php
 
             $datosC = categoria_model::viewCategoria();
@@ -43,25 +44,25 @@
             }
             }
             ?>
-            <form method="post">
+
                 <input type="hidden" name="idProducto" value="<?php echo $datoP["id"] ?>">
+                <input type="hidden" name="precio" value="<?php echo $datoP["precio"] ?>">
                 <button type="submit" name="agregarProducto">Agregar al Carrito</button>
             </form>
         </div>
 
         <?php
 
+
     }
-?>
-</div>
-<?php
-if (isset($_POST['agregarProducto'])) {
-    $idProducto = $_POST["idProducto"];
+    if (isset($_POST['agregarProducto'])) {
+    session_start();
+    carrito_model::addProductoCarrito($_POST["idProducto"],1,$_POST["precio"],$_SESSION["id"]);
     header("refresh: 0.1");
 
 }
-
 ?>
+</div>
 
 <button name="home"><a href="menu_admin.html"> Volver al menu </a> </button>
 </body>
