@@ -10,14 +10,14 @@ class productos_model{
         $producto -> addProducto($nombre,$precio,$stock,$categoria);
 
     }
-    public static function modProducto($id,$nombre,$descripcion){
+    public static function modProducto($id,$nombre,$precio,$stock,$categoria){
 
-        $categoria = new categoria_controller();
-        $categoria -> modCategoria($id,$nombre,$descripcion);
+        $producto = new producto_controller();
+        $producto -> modProducto($id,$nombre,$precio,$stock,$categoria);
     }
     public static function delProducto($id){
-        $categoria = new categoria_controller();
-        $categoria ->delCategoria($id);
+        $producto = new producto_controller();
+        $producto -> delProducto($id);
     }
     public static function viewProducto(){
 

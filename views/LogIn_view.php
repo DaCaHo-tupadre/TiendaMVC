@@ -13,7 +13,7 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/usuarios_model.php");
     <label >nombre:</label>
     <input type="text" name="nombre"><br><br>
     <label >Password:</label>
-    <input type="text" name="password"><br><br>
+    <input type="password" name="password"><br><br>
     <input type="submit" name="enviar" >
 </form>
 <button name="home"><a href="Register_view.php"> Registrarse </a> </button>

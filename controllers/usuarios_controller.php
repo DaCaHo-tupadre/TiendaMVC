@@ -29,6 +29,12 @@
                         WHERE  `id` = $id ";
             $consulta=$this->bd->query($sql);
         }
+        public function modPerfilUsuario($id,$nick, $mail,$password){
+
+            $sql = "UPDATE `$this->tabla` SET `nick` = '$nick', `mail` = '$mail', `password`= '$password'
+                        WHERE  `id` = $id ";
+            $consulta=$this->bd->query($sql);
+        }
         public function delUsuario($id){
             $sql = "DELETE FROM `$this->tabla` WHERE `id` = $id";
             $consulta=$this->bd->query($sql);

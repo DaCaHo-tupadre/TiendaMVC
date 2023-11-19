@@ -15,9 +15,9 @@ require_once("C:/xampp/htdocs/TiendaMVC/models/usuarios_model.php");
     <label >mail:</label>
     <input type="text" name="mail"><br><br>
     <label >Contraseña:</label>
-    <input type="text" name="password"><br><br>
+    <input type="password" name="password"><br><br>
     <label >Contraseña confirmada:</label>
-    <input type="text" name="passwordC"><br><br>
+    <input type="password" name="passwordC"><br><br>
 
     <input type="submit" name="enviar" >
 </form>

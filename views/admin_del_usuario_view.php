@@ -37,7 +37,7 @@
         <form method="POST">
             <tr>
                 <td>
-                    <input type="text" name="id" value="<?php echo $dato["id"]?>"  >
+                    <input type="text" name="id" value="<?php echo $dato["id"]?>"  readonly>
                 </td>
                 <td>
                     <input type="text" name="nick" value="<?php echo $dato["nick"]?>" readonly>

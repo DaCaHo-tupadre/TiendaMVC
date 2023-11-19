@@ -1,5 +1,5 @@
 <?php  require_once("C:/xampp/htdocs/TiendaMVC/models/productos_model.php"); ?>
-<?php  require_once("C:/xampp/htdocs/TiendaMVC/models/categoria_model.php"); ?>
+<?php  require_once("C:/xampp/htdocs/TiendaMVC/models/carrito_model.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,36 +29,36 @@
 
     <?php
     echo "<hr/>";
-
-    $datosC = categoria_model::viewCategoria();
+        session_start();
+    $datosC = carrito_model::viewCarrito($_SESSION["id"]);
     $datosP = productos_model::viewProducto();
 
-    foreach ($datosP as $datoP){
+    foreach ($datosC as $datoC){
         ?>
         <tr>
-            <td><?php echo $datoP["id"]?></td>
+            <?php
+            foreach ($datosP as $datoP) {
+            if($datoP["id"]==$datoC["categoria"]){
+            ?>
+
             <td><?php echo $datoP["nombre"]?></td>
-
-            <td><?php echo $datoP["precio"]?></td>
-
-            <td><?php echo $datoP["stock"]?></td>
-        
-
+        </tr>
     <?php
-
-    foreach ($datosC as $datoC) {
-        if($datoC["id"]==$datoP["categoria"]){
+            }
+        }
         ?>
 
-            <td><?php echo $datoC["nombre"]?></td>
-        </tr>
+        <td><?php echo $datoC["cantidad"]?></td>
+
+        <td><?php echo ($datoC["cantidad"]*$datoC["precio"])?></td>
+
+
         <?php
-        }
-        }
+
     }
     ?>
 </table>
 
 <button name="home"><a href="menu_admin.html"> Volver al menu </a> </button>
 </body>
-</html>
+</html

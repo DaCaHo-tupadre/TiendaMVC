@@ -24,6 +24,10 @@
             $usuario = new usuarios_controller();
             return $usuario ->viewUsuario();
         }
+        public static function modPerfilUsuario($id,$nick,$password, $mail){
+            $usuario = new usuarios_controller();
+            $usuario -> modPerfilUsuario($id,$nick,$password, $mail);
+        }
         public static function LogInUsuario($nick, $password){
 
             $usuarios = new usuarios_controller();
@@ -39,9 +43,10 @@
                     $_SESSION["mail"]=$us["mail"];
                     $_SESSION["password"]=$us["password"];
                     $_SESSION["admin"]=$us["admin"];
+                    header("Location: ../views/Menu_view.php");
                 }
 
-                header("Location: ../views/Menu_view.php");
+
             }
 
         }

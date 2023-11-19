@@ -23,12 +23,13 @@ VALUES ('$nombre','$precio','$stock','$categoria')";
 $consulta=$this->bd->query($sql);
 
 }
-public function modProducto($id,$nombre,$descripcion){
+public function modProducto($id,$nombre,$precio,$stock,$categoria){
 
-$sql = "UPDATE `$this->tabla` SET `nombre` = '$nombre', `descripcion` = '$descripcion'
+$sql = "UPDATE `$this->tabla` SET `nombre` = '$nombre', `precio` = '$precio', `stock` = '$stock', `categoria` = '$categoria'
 WHERE  `id` = $id ";
 $consulta=$this->bd->query($sql);
 }
+
 public function delProducto($id){
 $sql = "DELETE FROM `$this->tabla` WHERE `id` = $id";
 $consulta=$this->bd->query($sql);
