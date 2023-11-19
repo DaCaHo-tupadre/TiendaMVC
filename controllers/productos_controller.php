@@ -16,9 +16,9 @@ $this->bd=Conectar::conexion();
 $this->tabla = "productos";
 }
 
-public function addProducto( $nombre,  $descripcion){
-$sql = "INSERT INTO `$this->tabla`( `nombre`, `descripcion`)
-VALUES ('$nombre','$descripcion')";
+public function addProducto( $nombre,$precio,$stock,$categoria){
+$sql = "INSERT INTO `$this->tabla`( `nombre`, `precio`, `stock`, `categoria`)
+VALUES ('$nombre','$precio','$stock','$categoria')";
 
 $consulta=$this->bd->query($sql);
 

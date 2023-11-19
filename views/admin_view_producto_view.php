@@ -37,23 +37,19 @@
         ?>
         <tr>
             <td><?php echo $datoP["id"]?></td>
-        </tr>
-        <tr>
             <td><?php echo $datoP["nombre"]?></td>
-        </tr>
-        <tr>
+
             <td><?php echo $datoP["precio"]?></td>
-        </tr>
-        <tr>
+
             <td><?php echo $datoP["stock"]?></td>
-        </tr>
+        
 
     <?php
 
     foreach ($datosC as $datoC) {
         if($datoC["id"]==$datoP["categoria"])
         ?>
-        <tr>
+
             <td><?php echo $datoC["nombre"]?></td>
         </tr>
         <?php

@@ -4,10 +4,10 @@ require_once ("C:/xampp/htdocs/TiendaMVC/controllers/productos_controller.php");
 
 class productos_model{
 
-    public static function addProducto($nick,$password){
+    public static function addProducto($nombre,$precio,$stock,$categoria){
 
-        $categoria = new categoria_controller();
-        $categoria -> addCategoria($nick,$password);
+        $producto = new producto_controller();
+        $producto -> addProducto($nombre,$precio,$stock,$categoria);
 
     }
     public static function modProducto($id,$nombre,$descripcion){
