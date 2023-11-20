@@ -39,7 +39,7 @@ require_once ("C:/xampp/htdocs/TiendaMVC/models/productos_model.php");
         <form method="POST">
             <tr>
                 <td>
-                    <input type="text" name="id" value="<?php echo $datoP["id"]?>"  >
+                    <input type="text" name="id" value="<?php echo $datoP["id"]?>"  readonly>
                 </td>
                 <td>
                     <input type="text" name="nombre" value="<?php echo $datoP["nombre"]?>" >
