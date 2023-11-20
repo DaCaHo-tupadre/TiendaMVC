@@ -15,17 +15,27 @@ class carrito_model{
         $datos = self::viewCarrito($usuario);
         $i =0;
         foreach ($datos as $dato){
-            if($i == 0){
-                $carrito -> addProductoCarrito($producto,$cantidad,$precio,$usuario);
-                $i+=1;
-            }elseif($dato["producto"]==$producto  && $dato["usuario"]==$usuario && $i == 0){
+
+            if($dato["producto"]==$producto  && $dato["usuario"]==$usuario && $i == 0){
                 $carrito ->sumProductoCarrito($producto,$cantidad,$precio,$usuario);
                 $i+=1;
             }
-
+        }
+        if($i == 0){
+            $carrito -> addProductoCarrito($producto,$cantidad,$precio,$usuario);
+            $i+=1;
         }
 
+    }
+    public static function sumProductoCarrito($id,$producto){
 
+        $carrito = new carrito_controller();
+        $carrito->sumaProductoCarrito($id,$producto);
+    }
+    public static function restProductoCarrito($id,$producto){
+
+        $carrito = new carrito_controller();
+        $carrito->restProductoCarrito($id,$producto);
     }
 }
 

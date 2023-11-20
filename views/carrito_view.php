@@ -51,11 +51,29 @@
         <td><?php echo $datoC["cantidad"]?></td>
 
         <td><?php echo ($datoC["cantidad"]*$datoC["precio"])?></td>
+            <form method="POST">
+                <input type="hidden" name="id" value="<?php echo $datoC["id"]?>" >
+                <input type="hidden" name="producto" value="<?php echo $datoC["producto"]?>" >
+                <td>  <button type="submit" name="mas">+</button></td>
+                <td>  <button type="submit" name="menos">-</button></td>
+            </form>
 
         </tr>
         <?php
 
     }
+    if (isset($_POST['mas'])) {
+        carrito_model::sumProductoCarrito($_POST["id"],$_POST["producto"]);
+        header("refresh: 0.01");
+
+    }
+    if (isset($_POST['menos'])) {
+
+        carrito_model::restProductoCarrito($_POST["id"],$_POST["producto"]);
+        header("refresh: 0.01");
+
+    }
+
     ?>
 </table>
 
